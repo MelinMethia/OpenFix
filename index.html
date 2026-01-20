@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenFix</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="active">Report Issue</a>
+    <a href="map.html">View Map</a>
+    <a href="reports.html">All Reports</a>
+  </nav>
+
+  <div class="container">
+    <h2>OpenFix – Report a Problem</h2>
+    
+    <span class="step-label">Upload Photo</span>
+    <input type="file" id="photo" accept="image/*">
+
+    <span class="step-label">Issue Type</span>
+    <select id="type">
+      <option value="Road">Road</option>
+      <option value="Garbage">Garbage</option>
+      <option value="Water">Water</option>
+      <option value="Street Light">Street Light</option>
+    </select>
+
+    <span class="step-label">Describe the Issue</span>
+    <textarea id="desc" placeholder="Describe the issue..."></textarea>
+
+    <button onclick="submitIssue()">Submit Report</button>
+
+    <div id="status" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

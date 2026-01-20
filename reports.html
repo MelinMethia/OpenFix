@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenFix - All Reports</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body onload="fetchReports()">
+
+  <nav>
+    <a href="index.html">Report Issue</a>
+    <a href="map.html">View Map</a>
+    <a href="reports.html" class="active">All Reports</a>
+  </nav>
+
+  <div class="container">
+    <h2>All Reported Issues</h2>
+    
+    <div id="reports-list">
+      <p style="text-align: center;">Loading community reports...</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

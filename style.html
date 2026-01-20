@@ -1,0 +1,217 @@
+/* --- Modern Variables & Theme --- */
+:root {
+  --primary: #6366f1;       /* Indigo */
+  --primary-hover: #4f46e5;
+  --danger: #ef4444;        /* Soft Red */
+  --bg-main: #6daceb;       /* Your Slate-Blue Background */
+  --text-dark: #0f172a;     
+  --card-bg: #ffffff;       /* Set to white for readability */
+  --border-color: #0f084e;  /* Dark Navy for the page border */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Global Reset --- */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 19px; 
+}
+
+/* --- Navigation --- */
+nav {
+  background: white;
+  padding: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f1f5f9;
+  color: var(--primary);
+}
+
+nav a.active {
+  background-color: #e0e7ff;
+  color: var(--primary);
+}
+
+/* --- Main Page Container (The "Bordered Page") --- */
+.container {
+  max-width: 650px;
+  margin: 3rem auto;
+  padding: 40px;
+  background: white;
+  border: 4px solid var(--border-color); /* Reinforced Page Border */
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+/* --- Bulleted Step Features --- */
+.step-label {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3rem; 
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+/* The "Big & Bright" Bullets */
+.step-label::before {
+  content: "•"; 
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-right: 12px;
+  line-height: 0;
+}
+
+/* --- Form Controls --- */
+input, select, textarea {
+  width: 100%;
+  padding: 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fdfdfd;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* --- Buttons --- */
+button {
+  width: 100%;
+  padding: 18px;
+  background: var(--primary);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Medium Sized Delete Button for the list */
+.delete-btn {
+  width: auto;
+  min-width: 160px;
+  padding: 10px 20px;
+  background: #fee2e2;
+  color: var(--danger);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 0; /* Adjusted for flex alignment */
+}
+
+.delete-btn:hover {
+  background: var(--danger);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* --- Report Cards (List View) --- */
+#reports-list {
+  margin-top: 20px;
+}
+
+.report-card {
+  background: var(--card-bg);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+}
+
+.report-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin: 15px 0;
+}
+
+/* --- Status Badge (Authority Tracking) --- */
+.status-badge {
+  background-color: #fef3c7; 
+  color: #92400e; 
+  padding: 6px 14px;
+  border-radius: 999px; 
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 1px solid #fcd34d;
+  letter-spacing: 0.5px;
+}
+
+/* Map specific styling */
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  border: 3px solid var(--border-color);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenFix - Map View</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    #map { height: 500px; width: 100%; border-radius: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body onload="initMap()">
+<nav>
+  <a href="index.html">Report Issue</a> | 
+  <a href="map.html" class="active">View Map</a> | 
+  <a href="reports.html">All Reports</a>
+</nav>
+<hr>
+
+  <h2>Community Issue Map</h2>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
