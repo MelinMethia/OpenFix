@@ -134,7 +134,7 @@ async function initMap() {
   if (!mapElement) return;
 
   // Center on user location or default
-  const map = L.map('map').setView([userLat || 13.0827, userLng || 80.2707], 13);
+ const map = L.map('map').setView([userLat || 20, userLng || 77], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
@@ -172,3 +172,4 @@ async function deleteReport(id) {
   }
 
 }
+
